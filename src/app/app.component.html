@@ -1,13 +1,6 @@
 
 
 <style>
-
-body{
-  background-image: url('https://thumbs.dreamstime.com/z/geom%C3%A9trica-de-alta-tecnolog%C3%ADa-fondo-geom%C3%A9trico-y-del-sistema-conexi%C3%B3n-con-abstracto-datos-digitales-159671135.jpg');
-   
-}
-
-
   h1,
   h2,
   h3,
@@ -68,7 +61,7 @@ body{
     display: flex;
     margin: 150px auto 32px;
     padding: 0 16px;
-    max-width: 960px;
+    max-width: 1000px;
     flex-direction: column;
     align-items: center;
   }
@@ -88,7 +81,25 @@ body{
     text-align: right;
   }
 
-  
+  .top10{
+    width: 1200px;
+    background-image: url('https://thumbs.dreamstime.com/z/geom%C3%A9trica-de-alta-tecnolog%C3%ADa-fondo-geom%C3%A9trico-y-del-sistema-conexi%C3%B3n-con-abstracto-datos-digitales-159671135.jpg');
+    margin-top: 30px;
+    
+  }
+
+  .top10 h1{
+    color: white;
+    text-align: center;
+  }
+
+  .card{
+    margin: auto;
+    border-color: #fecc00;
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 5px;
+  }
 
   footer {
     margin-top: 8px;
@@ -133,14 +144,74 @@ body{
   </div>
 
   <div class="top10">
-    <div class="card" style="width:400px; display: inline;">
-      <img class="card-img-top" src="../bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-        <a href="#" class="btn btn-primary">See Profile</a>
+    <h1>Top 10 Frameworks 2021</h1>
+    <div class="card mb-3" style="max-width: 800px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://sigdeletras.com/images/blog/202004_react_leaflet/react.png" class="img-fluid rounded-start" style="padding: 20px;margin-top: 40%;">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">#1 React</h5>
+            <p class="card-text">Tiene la comunidad más grande en el mundo frontend, y a pesar que la curva de aprendizaje es un poco elevada una vez dominado, el desarrollo se hace mucho más sencillo.</p>
+            <h6 class="card-title">Características principales:</h6>
+            <p class="card-text">              
+              - Tiene el lema “Aprenda una vez, escriba en cualquier lugar”, ya que los ingenieros de software pueden usar React para desarrollar aplicaciones para cualquier tipo de interfaz de usuario, por ejemplo, web, móvil, escritorio o incluso para Smart TV.<br>
+              - React ofrece la mejor representación del lado del servidor con un excelente soporte de SEO.<br>
+              - Es uno de los frameworks de desarrollo más disruptivos e innovadores. Ha popularizado el enlace de datos unidireccional, la programación declarativa y el estado inmutable.
+            </p>
+            <a>Más detalles</a>
+          </div>
+        </div>
       </div>
     </div>
+
+    <div class="card mb-3" style="max-width: 800px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://www.theblocklearning.com/wp-content/uploads/2018/09/vue2.jpg" class="img-fluid rounded-start" style="padding: 20px;margin-top: 40%;">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">#2 Vue</h5>
+            <p class="card-text">Lo que más me llama la atención de Vue es lo simple que maneja las cosas y su rápida curva de aprendizaje. Cada día está ganando popularidad y la comunidad la está tomando en cuenta cada vez más.</p>
+            <h6 class="card-title">Características principales:</h6>
+            <p class="card-text">              
+              - Ofrece una funcionalidad de desarrollo de aplicaciones de extremo a extremo similar a Angular y una capa de vista similar a React con flujo de datos externos y administración de estado. La CLI de Vue.js también ayuda a crear una nueva aplicación Vue.js con un estilo de convención sobre configuración.
+              - Bajó la barrera para el desarrollo de frontend basado en JavaScript. Ofrece documentación de primera calidad. Tiene un gran número de seguidores en China y tiene documentación china.
+              - Es el mejor marco de JavaScript para el desarrollo progresivo de aplicaciones web.
+              - Ofrece enlace de datos reactivo bidireccional como Angular. También es compatible con Virtual DOM y Event Sourcing como React.
+            </p>
+            <a>Más detalles</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-3" style="max-width: 800px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://cdn.appdesign.dev/wp-content/uploads/2020/08/Agencia-desarrollo-Angular-JS.jpg" class="img-fluid rounded-start" style="padding: 20px;margin-top: 40%;">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">#3 Angular</h5>
+            <p class="card-text">Tiene un marco MVC (Modelo-Vista-Controlador) y lo que me gusta es que ya está totalmente integrado con Typescript, lo cual enriquece trabajar con javascript. Orientado a sistemas grandes por su fácil escalabilidad.</p>
+            <h6 class="card-title">Características principales:</h6>
+            <p class="card-text">              
+              - Angular CLI es una de las mejores CLI en desarrollo web y ayuda a crear un nuevo proyecto Angular.<br>
+              - Es el framework del lado del cliente más pesado con una curva de aprendizaje empinada.<br>
+              - Es el framework web del lado del cliente más seguro y ofrece características altamente seguras como el saneamiento de DOM.<br>
+              - Se utiliza para desarrollar aplicaciones para varios objetivos de implementación: web, web móvil, móvil nativo y escritorio nativo.<br>
+              - Con el respaldo de Google, Angular se usa ampliamente en la industria y tiene un excelente soporte de herramientas.
+            </p>
+            <a>Más detalles</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 
 
