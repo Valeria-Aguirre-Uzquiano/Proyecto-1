@@ -1,6 +1,14 @@
 
 
 <style>
+  html{
+    scroll-behavior: smooth;
+  }
+  h1{
+    font-family: 'Bradley Hand';
+    font-weight: 100%;
+  }
+
   h1,
   h2,
   h3,
@@ -12,6 +20,8 @@
 
   p {
     margin: 0;
+    font-family: 'Luminari';
+    font-size: 25px;
   }
 
   .spacer {
@@ -19,7 +29,7 @@
   }
 
   .toolbar {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -40,6 +50,7 @@
 
   .toolbar h1{
     margin-left: 20px;
+    font-family: 'Lucida Bright';
   }
 
   .pages{
@@ -51,13 +62,18 @@
   .pages a{
     color: white;
     margin-right: 30px;
+    font-family: 'Lucida Sans Typewriter';
+    font-size: 20px;
+    text-decoration: none;
   }
 
   .pages a:hover{
     color: #fecc00;
+    text-decoration: underline;
   }
 
   .content {
+    height: auto;
     display: flex;
     margin: 150px auto 32px;
     padding: 0 16px;
@@ -82,48 +98,88 @@
   }
 
   .top10{
-    width: 1200px;
-    background-image: url('https://thumbs.dreamstime.com/z/geom%C3%A9trica-de-alta-tecnolog%C3%ADa-fondo-geom%C3%A9trico-y-del-sistema-conexi%C3%B3n-con-abstracto-datos-digitales-159671135.jpg');
+    width: 1500px;
+    background-image: url('https://assets.bedu.org/images/top-lenguajes-programacion-2021.jpg?w=1200');
     margin-top: 30px;
-    
+    border-radius: 30px;
   }
 
   .top10 h1{
-    color: white;
+    color: #fecc00;
+    text-shadow: 2px 2px white;
     text-align: center;
+    font-size: 100px;
   }
 
   .card{
+    max-width: 1300px;
+    position: static;
     margin: auto;
     border-color: #fecc00;
     border-radius: 30px;
     border-style: solid;
     border-width: 5px;
+    background: none;
+    color: white;
+  }
+
+  .card h5, h6, a{
+    font-family: 'Blippo';
+    font-weight: bold;
+    background-color: #004076;
+    color: white;
+  }
+
+  .card p{
+    font-size: 20px;
+    font-family: 'Corbel';
+    background-color: #004076;
+    color: white;
+  }
+
+  #move-up{
+    border: none;
+    background: none;
+    font-size: 80px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+  }
+  i{
+    cursor: pointer;
   }
 
   footer {
-    margin-top: 8px;
+    width: 1900px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
-    line-height: 20px;
+    line-height: 100px;
+    background-color: #fecc00;
+  
+  }
+  footer p{
+    margin-left: 700px;
   }
 
 </style>
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-  <img src="https://www.ucb.edu.bo/wp-content/uploads/2020/08/colores-horizontal-NAC-1024x768.png"/>
+  <a href="https://www.ucb.edu.bo/" target="_blank"><img src="https://www.ucb.edu.bo/wp-content/uploads/2020/08/colores-horizontal-NAC-1024x768.png"/></a>
   <h1>Ingeniería de Sistemas</h1>
   <div class="pages">
-    <a href="#">Tecnologías Web</a>
-    <a href="#">Frameworks</a>
-    <a href="#">Top 10</a>
+    <a href="#asig">Tecnologías Web</a>
+    <a href="#frame">Frameworks</a>
+    <a href="#top10">Top 10</a>
   </div>
-    
 </div>
 
+
+
 <div class="content" role="main">
-  <div class="asig">
+  <section class="asig" id="asig">
     <h1>Introducción a Tecnologías Web</h1>
     <p>En la actualidad toda institución requiere interactuar de menor a mayor manera con las
       nuevas tecnologías de información y comunicación siendo el uso de las tecnologías online
@@ -132,72 +188,70 @@
       proporciona una ventaja competitiva a los profesionales e instituciones que hacen uso
       efectivo de estas tecnologías.
     </p>
-  </div>
+  </section>
 
-  <div class="frame">
+  <section class="frame" id="frame">
     <h1>¿Qué es un Framework?</h1>
     <p>
       Un Framework es una estructura previa que se puede aprovechar para desarrollar un proyecto.
       El Framework es una especie de plantilla, un esquema conceptual, que simplifica la elaboración
       de una tarea, ya que solo es necesario complementarlo de acuerdo a lo que se quiere realizar.
     </p>
-  </div>
+  </section>
 
-  <div class="top10">
+  <section class="top10" id="top10">
     <h1>Top 10 Frameworks 2021</h1>
-    <div class="card mb-3" style="max-width: 800px;">
+    <div class="card mb-3">
       <div class="row g-0">
         <div class="col-md-4">
-          <img src="https://sigdeletras.com/images/blog/202004_react_leaflet/react.png" class="img-fluid rounded-start" style="padding: 20px;margin-top: 40%;">
+          <img src="https://sigdeletras.com/images/blog/202004_react_leaflet/react.png" class="img-fluid rounded-start" style="padding: 20px;margin-top: 10%;">
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">#1 React</h5>
+            <h5 class="card-title">#1 <a href="https://es.reactjs.org/" target="_blank">React</a></h5>
             <p class="card-text">Tiene la comunidad más grande en el mundo frontend, y a pesar que la curva de aprendizaje es un poco elevada una vez dominado, el desarrollo se hace mucho más sencillo.</p>
-            <h6 class="card-title">Características principales:</h6>
+            <h5 class="card-title">Características principales:</h5>
             <p class="card-text">              
               - Tiene el lema “Aprenda una vez, escriba en cualquier lugar”, ya que los ingenieros de software pueden usar React para desarrollar aplicaciones para cualquier tipo de interfaz de usuario, por ejemplo, web, móvil, escritorio o incluso para Smart TV.<br>
               - React ofrece la mejor representación del lado del servidor con un excelente soporte de SEO.<br>
               - Es uno de los frameworks de desarrollo más disruptivos e innovadores. Ha popularizado el enlace de datos unidireccional, la programación declarativa y el estado inmutable.
             </p>
-            <a>Más detalles</a>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3" style="max-width: 800px;">
+    <div class="card mb-3">
       <div class="row g-0">
         <div class="col-md-4">
-          <img src="https://www.theblocklearning.com/wp-content/uploads/2018/09/vue2.jpg" class="img-fluid rounded-start" style="padding: 20px;margin-top: 40%;">
+          <img src="https://www.theblocklearning.com/wp-content/uploads/2018/09/vue2.jpg" class="img-fluid rounded-start" style="padding: 20px;margin-top: 5%;">
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">#2 Vue</h5>
+            <h5 class="card-title">#2 <a href="https://vuejs.org/" target="_blank">Vue</a></h5>
             <p class="card-text">Lo que más me llama la atención de Vue es lo simple que maneja las cosas y su rápida curva de aprendizaje. Cada día está ganando popularidad y la comunidad la está tomando en cuenta cada vez más.</p>
-            <h6 class="card-title">Características principales:</h6>
+            <h5 class="card-title">Características principales:</h5>
             <p class="card-text">              
               - Ofrece una funcionalidad de desarrollo de aplicaciones de extremo a extremo similar a Angular y una capa de vista similar a React con flujo de datos externos y administración de estado. La CLI de Vue.js también ayuda a crear una nueva aplicación Vue.js con un estilo de convención sobre configuración.
               - Bajó la barrera para el desarrollo de frontend basado en JavaScript. Ofrece documentación de primera calidad. Tiene un gran número de seguidores en China y tiene documentación china.
               - Es el mejor marco de JavaScript para el desarrollo progresivo de aplicaciones web.
               - Ofrece enlace de datos reactivo bidireccional como Angular. También es compatible con Virtual DOM y Event Sourcing como React.
             </p>
-            <a>Más detalles</a>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="card mb-3" style="max-width: 800px;">
+    <div class="card mb-3">
       <div class="row g-0">
         <div class="col-md-4">
-          <img src="https://cdn.appdesign.dev/wp-content/uploads/2020/08/Agencia-desarrollo-Angular-JS.jpg" class="img-fluid rounded-start" style="padding: 20px;margin-top: 40%;">
+          <img src="https://cdn.appdesign.dev/wp-content/uploads/2020/08/Agencia-desarrollo-Angular-JS.jpg" class="img-fluid rounded-start" style="padding: 20px;margin-top: 15%;">
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">#3 Angular</h5>
+            <h5 class="card-title">#3 <a href="https://angular.io/" target="_blank">Angular</a></h5>
             <p class="card-text">Tiene un marco MVC (Modelo-Vista-Controlador) y lo que me gusta es que ya está totalmente integrado con Typescript, lo cual enriquece trabajar con javascript. Orientado a sistemas grandes por su fácil escalabilidad.</p>
-            <h6 class="card-title">Características principales:</h6>
+            <h5 class="card-title">Características principales:</h5>
             <p class="card-text">              
               - Angular CLI es una de las mejores CLI en desarrollo web y ayuda a crear un nuevo proyecto Angular.<br>
               - Es el framework del lado del cliente más pesado con una curva de aprendizaje empinada.<br>
@@ -205,24 +259,173 @@
               - Se utiliza para desarrollar aplicaciones para varios objetivos de implementación: web, web móvil, móvil nativo y escritorio nativo.<br>
               - Con el respaldo de Google, Angular se usa ampliamente en la industria y tiene un excelente soporte de herramientas.
             </p>
-            <a>Más detalles</a>
           </div>
         </div>
       </div>
     </div>
 
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://laravelnews.imgix.net/images/laravel-featured.png?ixlib=php-3.3.1" class="img-fluid rounded-start" style="padding: 20px;margin-top: 25%;">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">#4 <a href="https://laravel.com/" target="_blank">Laravel</a></h5>
+            <p class="card-text">PHP es un lenguaje de programación especialmente diseñado para el desarrollo web. Taylor Otwell creó Laravel en 2011 como un framework web del lado del servidor basado en PHP que sigue el patrón arquitectónico MVC. También sigue la filosofía “Ruby on Rails” y proporciona CoC y muchas funcionalidades listas para usar esenciales para el desarrollo web empresarial.</p>
+            <h5 class="card-title">Características principales:</h5>
+            <p class="card-text">              
+              - Es un framework web MVC (Model-View-Controller) de nivel empresarial, renderizado en el lado del servidor, con soporte adicional para la programación asincrónica. Con CLI artesanal, ofrece desarrollo rápido de aplicaciones.<br>
+              - Ofrece Inversión de control (IoC) con inyección de dependencia (DI) para administrar dependencias entre clases. Laravel proporciona el potente motor de plantillas Blade que admite la herencia y la sección de plantillas.<br>
+              - Laravel ofrece una rápida velocidad de desarrollo.<br> 
+              - Es especialmente adecuado para aplicaciones web altamente escalables y de alto rendimiento.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  </div>
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://www.edgica.com/wp-content/files/django-logo-big.jpg" class="img-fluid rounded-start" style="padding: 20px;margin-top: 20%;">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">#5 <a href="https://www.djangoproject.com/" target="_blank">Django</a></h5>
+            <p class="card-text">Es un marco web del lado del servidor basado en Python que sigue el patrón arquitectónico de MTV. En la última década, la popularidad de Python aumentó a pasos agigantados, lo que afectó directamente la alta adopción de Django. Además de eso, Django ofrece muchas características agradables y actualmente es uno de los principales frameworks web del lado del servidor.</p>
+            <h5 class="card-title">Características principales:</h5>
+            <p class="card-text">              
+              - Es un framework web MTV (Model-Template-View) de nivel empresarial, renderizado en el lado del servidor, con soporte adicional para programación reactiva asíncrona. Con Django Admin, ofrece desarrollo rápido de aplicaciones.<br>
+              - Ofrece extensibilidad a través de aplicaciones conectables donde las aplicaciones de terceros se pueden conectar fácilmente.<br>
+              - Ofrece una velocidad de desarrollo vertiginosa.<br>
+              - Django funciona a la perfección con el ecosistema Python, que es uno de los ecosistemas más grandes de la industria.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://miro.medium.com/max/1400/1*Q5EUk28Xc3iCDoMSkrd1_w.png" class="img-fluid rounded-start" style="padding: 20px;margin-top: 10%;margin-left: 10px;background-color: white;">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">#6 <a href="https://flask.palletsprojects.com/en/2.0.x/" target="_blank">Flask</a></h5>
+            <p class="card-text">Flask se llama Micro-framework ya que no está controlado y no necesita ninguna herramienta o biblioteca en particular. Es comparable a Express.js y no ofrece soporte listo para usar para ORM, validación de formularios o valores. Sin embargo, Flask es altamente modular y admite extensiones conectables. Flask también goza de gran popularidad con la creciente popularidad de Python.</p>
+            <h5 class="card-title">Características principales:</h5>
+            <p class="card-text">              
+              - Es un marco Micro Web renderizado del lado del servidor.<br>
+              - Core Flask es extensible a través de módulos conectables.<br>
+              - Es un marco contenedor que utiliza Jinja2 como motor de plantilla y Werkzeug para el manejo de HTTP.<br>
+              - Flask también proporciona una CLI, que ayuda al desarrollador a acceder a la aplicación. La CLI también es extensible.<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://ichi.pro/assets/images/max/724/1*XP-mZOrIqX7OsFInN2ngRQ.png" class="img-fluid rounded-start" style="padding: 20px;margin-top: 25%;">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">#7 <a href="https://expressjs.com/es/" target="_blank">Express</a></h5>
+            <p class="card-text">TJ Holowaychuk creó Express.js como un marco web MVC (Model-View-Controller) del lado del servidor basado en el tiempo de ejecución de JavaScript Node.js. Express.js estaba fuertemente influenciado por el minimalista Web Framework Sinatra y ofrecía una funcionalidad minimalista similar. Los desarrolladores usan Express.js para desarrollar backend basado en REST, o aplicaciones web completas renderizadas del lado del servidor junto con la capa de vista conectable.</p>
+            <h5 class="card-title">Características principales:</h5>
+            <p class="card-text">              
+              - Es un framework web minimalista, renderizado del lado del servidor y el marco del lado del servidor en Node.js.<br>
+              - Aunque se utiliza principalmente para Backend, también admite el desarrollo de aplicaciones de un extremo a otro. Es compatible con el patrón MVC con la capa de vista que admite el motor de plantillas 14+.<br>
+              - Es compatible con middleware, enrutamiento, plantillas.<br>
+              - Con más de 10 años de desarrollo activo, es maduro, estable y de alto rendimiento.<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://www.muylinux.com/wp-content/uploads/2017/12/Ruby-on-Rails-1.png" class="img-fluid rounded-start" style="padding: 20px;margin-top: 30%;">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">#8 <a href="https://rubyonrails.org/" target="_blank">Ruby On Rails</a></h5>
+            <p class="card-text">Se creó como un framework de desarrollo web del lado del servidor que admitía el patrón MVC y el lenguaje de programación Ruby. Introdujo muchas ideas y conceptos novedosos: Convención sobre configuración (CoC), No se repita (DRY), Patrón de registro activo. También introdujo el desarrollo rápido de aplicaciones a través de la creación y migración de bases de datos, el andamiaje de vistas.</p>
+            <h5 class="card-title">Características principales:</h5>
+            <p class="card-text">              
+              - Es un framework web renderizado del lado del servidor que se centra en la convención sobre la configuración, DRY. Es compatible con la arquitectura MVC junto con la programación reactiva asíncrona.<br>
+              - El primer framework web se centró en la experiencia del desarrollador y la velocidad del desarrollo al reducir la entrada al desarrollo web. Fue el framework que marcó tendencias e influyó en muchos otros frameworks de desarrollo (por ejemplo, Django, Laravel, Play, DropWizard, Angular, Ember.js). Ha introducido el término “Ruby on Rails way”, seguido incluso en el desarrollo no web.<br>
+              - Ofrece una velocidad de desarrollo vertiginosa.<br>
+              - Ruby on Rails se utiliza ampliamente en la industria y algunas de las aplicaciones web más importantes se desarrollan con él.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://ichi.pro/assets/images/max/724/0*Q8ax33ctjsEfRRlg" class="img-fluid rounded-start" style="padding: 20px;margin-top: 50%;">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">#9 <a href="https://spring.io/" target="_blank">Spring</a></h5>
+            <p class="card-text">Se creó el marco Spring como una inversión de control, marco web del lado del servidor en 2002. Desde entonces, Spring ha crecido con el tiempo y ahora es el marco web principal en el desarrollo de aplicaciones basadas en Java. La mejor parte de Spring es evolucionar con el panorama cambiante y desempeñar un papel muy importante en hacer que Java sea relevante en la era de la computación en la nube.</p>
+            <h5 class="card-title">Características principales:</h5>
+            <p class="card-text">              
+              - Es un marco web de nivel empresarial, del lado del servidor, principalmente MVC (Model-View-Controller) con soporte para programación asincrónica y reactiva. También es, a cierta distancia, el framework web líder basado en JVM.<br>
+              - Es una inversión de control, inyección de dependencia y anotación altamente innovadora y popularizada. Muchos otros frameworks posteriormente copian estos conceptos.<br>
+              - Spring Web Framework es parte del ecosistema Spring más grande, que admite el desarrollo nativo en la nube adicional, el procesamiento por lotes, el desarrollo de aplicaciones controladas por eventos y muchos más.<br>
+              - Está diseñado para el desarrollo de aplicaciones a gran escala y ofrece todo lo que necesita para dicho desarrollo de aplicaciones (por ejemplo, seguridad sofisticada, numerosas fuentes de datos, implementación de múltiples nubes).<br>
+              - Sus características de desarrollo de aplicaciones rápidas son una de las mejores en el panorama del desarrollo web. Con la ayuda de Spring Initializer, puede crear una aplicación de nivel empresarial con solo unos pocos clics.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://globaldevgate.com/assets/img/tracks/aspnetcore-logo-591x360.png" class="img-fluid rounded-start" style="padding: 20px;margin-top: 30%;">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">#10 <a href="https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-5.0" target="_blank">ASP.NET Core</a></h5>
+            <p class="card-text">En 2016, Microsoft lanzó el sucesor de ASP.NET como ASP.NET Core, que es de código abierto y una reelaboración completa de su predecesor. Es un framework web modular que puede ejecutarse en múltiples plataformas y funciona a la perfección con los frameworks de desarrollo modernos del lado del cliente de JavaScript.</p>
+            <h5 class="card-title">Características principales:</h5>
+            <p class="card-text">              
+              - Es un framework web de nivel empresarial, del lado del servidor, principalmente MVC (Model-View-Controller). También es compatible con componentes de tiempo de ejecución, programación reactiva y asíncrona.<br>
+              - Puede ejecutarse en varias plataformas: en Windows, en .NET framework y .NET Core multiplataforma (Windows, Linux, MacOS).<br>
+              - Tiene un diseño modular, y muchas otras bibliotecas .NET y la mayoría de las bibliotecas populares del lado del cliente de JavaScript (React, Angular, Vue.js, Ember.js) funcionan a la perfección con ASP.NET Core.<br>
+              - Está diseñado para el desarrollo de aplicaciones a gran escala y supera cómodamente a otros frameworks web.<br>
+              - Tiene uno de los mejores soportes de herramientas, ya que Microsoft también desarrolla IDE populares (VS Code, Visual Studio). Ofrece una excelente experiencia de desarrollo de aplicaciones rápidas con compatibilidad con CLI e IDE.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <button id="move-up" (click)="onClick()">
+    <i class="fas fa-arrow-circle-up"></i>
+  </button>
 
   <!-- Footer -->
   <footer>
-      
+      <p>© Copyright Universidad Católica Boliviana San Pablo 2021</p>
   </footer>
-
   
 </div>
 
 
+
 <router-outlet></router-outlet>
+
